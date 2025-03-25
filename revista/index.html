@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Precios - gviz JSON</title>
+</head>
+<body>
+  <h1>Lista de Precios</h1>
+  <div id="output"></div>
+
+  <script>
+    // URL que devuelve la respuesta gviz
+    const url = 'https://docs.google.com/spreadsheets/d/1wjs6v965MknQsMIa3qFK3FzQ6_pB9ae_1JX5M9JZf60/gviz/tq?tqx=out:json&gid=0';
+
+    fetch(url)
+      .then(response => response.text())
+      .then(text => {
+        // 1) El texto viene con el formato:
+        //    google.visualization.Query.setResponse(...);
+        // 2) Quitamos la parte inicial y final para quedarnos con el JSON interno.
+        const jsonString = text.substring(
+          text.indexOf('(') + 1,   // posición justo después de "("
+          text.lastIndexOf(')')    // posición de la última ")"
+        );
+
+        // 3) Parseamos el string como JSON
+        const jsonData = JSON.parse(jsonString);
+
+        // 4) Accedemos a la tabla -> filas
+        const rows = jsonData.table.rows;
+
+        // 5) Armamos el HTML con la info
+        let html = '<ul>';
+        rows.forEach(row => {
+          // Cada fila tiene un array "c" con las celdas
+          // row.c[0].v -> valor en la primera columna (codigo)
+          // row.c[1].v -> valor en la segunda columna (descripcion)
+          // row.c[2].v -> valor en la tercera columna (precio)
+          const codigo = row.c[0]?.v || '';
+          const descripcion = row.c[1]?.v || '';
+          const precio = row.c[2]?.v || '';
+
+          html += `<li><strong>${codigo}</strong> - ${descripcion}: $${precio}</li>`;
+        });
+        html += '</ul>';
+
+        // 6) Mostramos en pantalla
+        document.getElementById('output').innerHTML = html;
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('output').textContent = 'No se pudo cargar la lista.';
+      });
+  </script>
+</body>
+</html>

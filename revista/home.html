@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revista Digital Makro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="brand">
+                <h1 class="logo">makro</h1>
+                <span class="tag">ALCANZA</span>
+            </div>
+            <div class="header-info">
+                <span class="vigencia">VIGENCIA: Del 20 al 26 de marzo de 2025</span>
+            </div>
+        </div>
+        <div class="container">
+            <h2 class="slogan">TE ACOMPAÑAMOS EN EL DESARROLLO DE TU NEGOCIO, CON NUESTRA PASIÓN POR DARTE LO MEJOR</h2>
+        </div>
+    </header>
+
+    <!-- Magazine Navigation -->
+    <div class="magazine-nav">
+        <div class="container nav-container">
+            <button class="nav-button" id="prev-page">
+                <i class="bi bi-chevron-left"></i>
+                <span>Anterior</span>
+            </button>
+            <div class="page-indicator">Página <span id="current-page">1</span> de <span id="total-pages">8</span></div>
+            <button class="nav-button" id="next-page">
+                <span>Siguiente</span>
+                <i class="bi bi-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Category Navigation -->
+    <div class="category-nav">
+        <div class="container">
+            <div class="tabs">
+                <button class="tab-button active" data-tab="carnes">Carnes</button>
+                <button class="tab-button" data-tab="abarrotes">Abarrotes</button>
+                <button class="tab-button" data-tab="lacteos">Lácteos</button>
+                <button class="tab-button" data-tab="limpieza">Limpieza</button>
+                <button class="tab-button" data-tab="bebidas">Bebidas</button>
+                <button class="tab-button" data-tab="ofertas">Ofertas por Bulto</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Magazine Content -->
+    <main class="magazine-content container">
+        <!-- Carnes Tab -->
+        <div class="tab-content active" id="carnes">
+            <div class="featured-products">
+                <div class="featured-product">
+                    <div class="product-image">
+                        <span class="discount-badge">15% de descuento</span>
+                        <img src="https://via.placeholder.com/400x300" alt="Carne de Cerdo">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">CARNE DE CERDO</h3>
+                        <p class="product-description">SIN HUESO</p>
+                        <div class="product-info">
+                            <p>1 kg • 1 kg</p>
+                            <p>Stock: 20</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$8.399,00</span>
+                            <span class="current-price">$6.499,00</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-product">
+                    <div class="product-image">
+                        <span class="discount-badge">15% de descuento</span>
+                        <img src="https://via.placeholder.com/400x300" alt="Trozado de Pollo ARO">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">TROZADO DE POLLO ARO</h3>
+                        <p class="product-description">CONGELADO</p>
+                        <div class="product-info">
+                            <p>1 kg • 1.25 kg</p>
+                            <p>Stock: 15</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$27.151,49</span>
+                            <span class="current-price">$21.699,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200x200" alt="Medallones de Carne ARO">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">MEDALLONES DE CARNE ARO</h3>
+                        <p class="product-description">CONGELADO</p>
+                        <div class="product-info">
+                            <p>1 kg • 1.15 kg</p>
+                            <p>Stock: 10</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$59.354,40</span>
+                            <span class="current-price">$52.499,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200x200" alt="Supremas de Pollo SADIA">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">SUPREMAS DE POLLO SADIA</h3>
+                        <p class="product-description">CONGELADO</p>
+                        <div class="product-info">
+                            <p>1 kg • 1 kg</p>
+                            <p>Stock: 8</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$27.151,49</span>
+                            <span class="current-price">$21.699,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200x200" alt="Rabas ARO">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">RABAS ARO</h3>
+                        <p class="product-description">REBOZADAS</p>
+                        <div class="product-info">
+                            <p>1 kg • 2.5 kg</p>
+                            <p>Stock: 5</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$21.199,72</span>
+                            <span class="current-price">$16.499,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="discount-badge">15% de descuento</span>
+                        <img src="https://via.placeholder.com/200x200" alt="Brocoli / Espinaca MCCAIN">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">BROCOLI / ESPINACA MCCAIN</h3>
+                        <p class="product-description">CONGELADO</p>
+                        <div class="product-info">
+                            <p>1 kg • 1 kg</p>
+                            <p>Stock: 12</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$21.199,72</span>
+                            <span class="current-price">$16.499,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Abarrotes Tab -->
+        <div class="tab-content" id="abarrotes">
+            <div class="featured-products">
+                <div class="featured-product">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Aceite Legitimo">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">ACEITE LEGITIMO</h3>
+                        <p class="product-description">GIRASOL</p>
+                        <div class="product-info">
+                            <p>1 lt • 3 lt</p>
+                            <p>Stock: 25</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$6.877,51</span>
+                            <span class="current-price">$6.239,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 6</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-product">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/400x300" alt="Sal Dos Anclas">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">SAL DOS ANCLAS</h3>
+                        <p class="product-description">FINA</p>
+                        <div class="product-info">
+                            <p>1 kg • 25 kg</p>
+                            <p>Stock: 30</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$19.231,87</span>
+                            <span class="current-price">$15.999,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200x200" alt="Capeletinis ARO">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">CAPELETINIS ARO</h3>
+                        <p class="product-description">PASTA SECA</p>
+                        <div class="product-info">
+                            <p>1 kg • 1 kg</p>
+                            <p>Stock: 18</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$7.106,12</span>
+                            <span class="current-price">$6.199,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://via.placeholder.com/200x200" alt="Ñoquis ARO">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">ÑOQUIS ARO</h3>
+                        <p class="product-description">PASTA SECA</p>
+                        <div class="product-info">
+                            <p>1 kg • 1 kg</p>
+                            <p>Stock: 15</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$5.857,78</span>
+                            <span class="current-price">$5.199,99</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 1 - máxima: 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ofertas por Bulto Tab -->
+        <div class="tab-content" id="ofertas">
+            <div class="bulk-offers-header">
+                <h2>Ofertas por Bulto</h2>
+                <p>Aprovecha los mejores precios comprando por cantidad</p>
+            </div>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="bulk-badge">LLEV. 9 UNI</span>
+                        <img src="https://via.placeholder.com/200x200" alt="Hileret Azúcar Light">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">HILERET AZÚCAR LIGHT</h3>
+                        <p class="product-description">ENDULZANTE</p>
+                        <div class="product-info">
+                            <p>50 sobres • 1 caja</p>
+                            <p>Stock: 30</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$1.599</span>
+                            <span class="current-price">$1.399</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 9 - máxima: 20</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="bulk-badge">LLEV. 12 UNI</span>
+                        <img src="https://via.placeholder.com/200x200" alt="Menoyo Mayonesa">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">MENOYO MAYONESA</h3>
+                        <p class="product-description">DOY PACK</p>
+                        <div class="product-info">
+                            <p>900 cc • 1 unidad</p>
+                            <p>Stock: 40</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$299</span>
+                            <span class="current-price">$259</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 12 - máxima: 24</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="bulk-badge">LLEV. 12 UNI</span>
+                        <img src="https://via.placeholder.com/200x200" alt="Knorr Caldo">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-name">KNORR CALDO VERDURA/GALLINA</h3>
+                        <p class="product-description">CUBOS</p>
+                        <div class="product-info">
+                            <p>12 uni • 1 caja</p>
+                            <p>Stock: 25</p>
+                        </div>
+                        <div class="product-price">
+                            <span class="original-price">$999</span>
+                            <span class="current-price">$899</span>
+                        </div>
+                        <div class="purchase-limits">
+                            <p>Compra mínima: 12 - máxima: 36</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Placeholder tabs -->
+        <div class="tab-content" id="lacteos">
+            <div class="placeholder-content">
+                <h2>Contenido de Lácteos</h2>
+                <p>Próximamente disponible</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="limpieza">
+            <div class="placeholder-content">
+                <h2>Contenido de Limpieza</h2>
+                <p>Próximamente disponible</p>
+            </div>
+        </div>
+
+        <div class="tab-content" id="bebidas">
+            <div class="placeholder-content">
+                <h2>Contenido de Bebidas</h2>
+                <p>Próximamente disponible</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Button -->
+    <div class="help-button">
+        <button id="help-btn" aria-label="Ayuda">
+            <i class="bi bi-question-circle-fill"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Makro. Todos los derechos reservados.</p>
+            <p class="footer-note">Precios válidos del 20 al 26 de marzo de 2025 o hasta agotar stock.</p>
+        </div>
+    </footer>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Ayuda para navegar la revista</h2>
+            <div class="help-instructions">
+                <div class="help-item">
+                    <i class="bi bi-arrow-left-right"></i>
+                    <p>Use los botones "Anterior" y "Siguiente" para cambiar de página</p>
+                </div>
+                <div class="help-item">
+                    <i class="bi bi-grid"></i>
+                    <p>Pulse en las pestañas para ver diferentes categorías de productos</p>
+                </div>
+                <div class="help-item">
+                    <i class="bi bi-zoom-in"></i>
+                    <p>Puede ampliar la pantalla con dos dedos o usando los controles de su navegador</p>
+                </div>
+                <div class="help-item">
+                    <i class="bi bi-question-circle"></i>
+                    <p>Pulse este botón en cualquier momento para ver esta ayuda</p>
+                </div>
+            </div>
+            <button class="close-help-button">Entendido</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- El título se actualizará desde la hoja config -->
+  <title>Revista Digital</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <!-- Header (se actualizará con datos de config) -->
+  <header class="header">
+      <div class="container header-container">
+          <div class="brand">
+              <h1 class="logo">Revista</h1>
+              <span class="tag">Tagline</span>
+          </div>
+          <div class="header-info">
+              <span class="vigencia">VIGENCIA: Fecha</span>
+          </div>
+      </div>
+      <div class="container">
+          <h2 class="slogan">Slogan</h2>
+      </div>
+  </header>
+
+  <!-- Magazine Navigation -->
+  <div class="magazine-nav">
+      <div class="container nav-container">
+          <button class="nav-button" id="prev-page">
+              <i class="bi bi-chevron-left"></i>
+              <span>Anterior</span>
+          </button>
+          <div class="page-indicator">Página <span id="current-page">1</span> de <span id="total-pages">1</span></div>
+          <button class="nav-button" id="next-page">
+              <span>Siguiente</span>
+              <i class="bi bi-chevron-right"></i>
+          </button>
+      </div>
+  </div>
+
+<!-- Category Navigation -->
+<div class="category-nav">
+    <div class="container">
+    <!-- Se reemplaza la lista fija por un contenedor vacío -->
+    <div class="tabs" id="tabs-container">
+        <!-- Los botones de categorías se generarán dinámicamente aquí -->
+    </div>
+    </div>
+</div>
+    
+
+  <!-- Magazine Content -->
+  <main class="magazine-content container">
+      <!-- Cada tab contendrá dos secciones: (opcional) productos destacados y el grid de productos -->
+      <div class="tab-content active" id="carnes">
+          <div class="featured-products" id="featured-carnes">
+            <!-- Aquí se insertarán los productos destacados de "carnes" -->
+          </div>
+          <div class="product-grid" id="grid-carnes">
+            <!-- Aquí se insertarán los productos de "carnes" -->
+          </div>
+      </div>
+
+      <div class="tab-content" id="abarrotes">
+          <div class="featured-products" id="featured-abarrotes"></div>
+          <div class="product-grid" id="grid-abarrotes"></div>
+      </div>
+
+      <div class="tab-content" id="lacteos">
+          <div class="placeholder-content">
+              <h2>Contenido de Lácteos</h2>
+              <p>Próximamente disponible</p>
+          </div>
+      </div>
+
+      <div class="tab-content" id="limpieza">
+          <div class="placeholder-content">
+              <h2>Contenido de Limpieza</h2>
+              <p>Próximamente disponible</p>
+          </div>
+      </div>
+
+      <div class="tab-content" id="bebidas">
+          <div class="placeholder-content">
+              <h2>Contenido de Bebidas</h2>
+              <p>Próximamente disponible</p>
+          </div>
+      </div>
+
+      <div class="tab-content" id="ofertas">
+          <div class="bulk-offers-header">
+              <h2>Ofertas por Bulto</h2>
+              <p>Aprovecha los mejores precios comprando por cantidad</p>
+          </div>
+          <div class="product-grid" id="grid-ofertas">
+            <!-- Productos de ofertas se insertarán acá -->
+          </div>
+      </div>
+  </main>
+
+  <!-- Help Button -->
+  <div class="help-button">
+      <button id="help-btn" aria-label="Ayuda">
+          <i class="bi bi-question-circle-fill"></i>
+      </button>
+  </div>
+
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container footer-container">
+    
+    <!-- Columna Izquierda -->
+    <div class="footer-left">
+      <!-- Nombre de la marca (o brand) -->
+      <h3 class="footer-brand" id="footer-brand"></h3>
+      
+      <!-- Teléfono -->
+      <p class="footer-contact">
+        <i class="bi bi-telephone-fill"></i>
+        <span id="footer-phone"></span>
+      </p>
+      
+      <!-- Email -->
+      <p class="footer-contact">
+        <i class="bi bi-envelope-fill"></i>
+        <span id="footer-mail"></span>
+      </p>
+      
+      <!-- Dirección -->
+      <p class="footer-contact">
+        <i class="bi bi-geo-alt-fill"></i>
+        <span id="footer-address"></span>
+      </p>
+    </div>
+    
+    <!-- Columna Derecha -->
+    <div class="footer-right">
+      <!-- Mensaje de derechos reservados o disclaimer -->
+      <p class="footer-note" id="footer-disclaimer"></p>
+      
+      <!-- Slogan o frase adicional -->
+      <p class="footer-note" id="footer-slogan"></p>
+      
+      <!-- Autoría y link a tu canal de YouTube -->
+      <p class="footer-love">
+        Hecho con <i class="bi bi-heart-fill"></i> by
+        <a href="#" id="footer-youtube-link" target="_blank"></a>
+      </p>
+    </div>
+    
+  </div>
+</footer>
+
+  
+
+  <!-- Help Modal -->
+  <div id="help-modal" class="modal">
+      <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Ayuda para navegar la revista</h2>
+          <div class="help-instructions">
+              <div class="help-item">
+                  <i class="bi bi-arrow-left-right"></i>
+                  <p>Use los botones "Anterior" y "Siguiente" para cambiar de página</p>
+              </div>
+              <div class="help-item">
+                  <i class="bi bi-grid"></i>
+                  <p>Pulse en las pestañas para ver diferentes categorías de productos</p>
+              </div>
+              <div class="help-item">
+                  <i class="bi bi-zoom-in"></i>
+                  <p>Puede ampliar la pantalla con dos dedos o usando los controles de su navegador</p>
+              </div>
+              <div class="help-item">
+                  <i class="bi bi-question-circle"></i>
+                  <p>Pulse este botón en cualquier momento para ver esta ayuda</p>
+              </div>
+          </div>
+          <button class="close-help-button">Entendido</button>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
